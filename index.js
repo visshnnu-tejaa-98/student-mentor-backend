@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb');
+const cors = require('cors');
 const mongoClient = mongodb.MongoClient;
 // const dbUrl = 'mongodb://localhost:27017';
 const dbUrl =
@@ -9,6 +10,11 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(
+	cors({
+		origin: 'https://suspicious-torvalds-184735.netlify.app/',
+	})
+);
 
 app.get('/', (req, res) => {
 	res.send('Hello NodeJS');
