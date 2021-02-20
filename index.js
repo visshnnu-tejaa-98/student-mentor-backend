@@ -12,7 +12,7 @@ const port = 3000;
 app.use(express.json());
 app.use(
 	cors({
-		origin: 'https://suspicious-torvalds-184735.netlify.app/',
+		origin: 'https://visshnnu-student-mentor-frontend.netlify.app',
 	})
 );
 
